@@ -1,4 +1,5 @@
 import { ANIMATION_INTERVAL } from './constants';
+import '/src/themeSwitcher';
 
 const getElementWidth = (/** @type {Element} */ element) =>
   element.getBoundingClientRect().width;
