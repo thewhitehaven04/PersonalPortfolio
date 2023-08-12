@@ -26,5 +26,8 @@
   "bugs": {
     "url": "https://github.com/thewhitehaven04/PersonalPortfolio/issues"
   },
-  "homepage": "https://github.com/thewhitehaven04/PersonalPortfolio#readme"
+  "homepage": "https://github.com/thewhitehaven04/PersonalPortfolio#readme",
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  }
 }
