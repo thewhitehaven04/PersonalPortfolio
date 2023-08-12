@@ -13,4 +13,4 @@ const themeTogglerService = new ThemeTogglerService(
   themeToggleButton,
   new ThemePersistenceService(),
 );
-themeTogglerService.applyPreferredThemeIfDefined();
+themeTogglerService.applyUserPreferredThemeIfDefined();

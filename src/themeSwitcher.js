@@ -33,17 +33,21 @@ export class ThemeTogglerService {
     this.toggleButton = button;
     this.bodyElement = document.querySelector('body');
 
-    this.prefersDarkSchemeQuery = window.matchMedia(
+    this.systemPreferredDarkSchemeQuery = window.matchMedia(
       '(prefers-color-scheme: dark)',
     );
 
-    this.isOverridden = Boolean(
-      themePersistenceService.getPreferredThemeFromLocalStorage(),
-    );
+    const initialPreferred =
+      themePersistenceService.getPreferredThemeFromLocalStorage();
+    if (initialPreferred) {
+      this.#setButtonTheme(initialPreferred === 'dark');
+    } else {
+      this.#setButtonTheme(this.isCurrentSystemPreferredThemeDark() === 'dark');
+    }
 
-    this.prefersDarkSchemeQuery.addEventListener('change', (e) => {
-      const isDarkTheme = e.matches;
-      if (!this.isOverridden) {
+    this.systemPreferredDarkSchemeQuery.addEventListener('change', (e) => {
+      const isDarkTheme = this.isCurrentSystemPreferredThemeDark() === 'dark';
+      if (!initialPreferred) {
         this.#setTheme(isDarkTheme);
         this.#setButtonTheme(isDarkTheme);
       }
@@ -52,20 +56,21 @@ export class ThemeTogglerService {
     this.toggleButton?.addEventListener('click', this.#toggleOnClick);
   }
 
-  #toggleOnClick(e) {
+  isCurrentSystemPreferredThemeDark = () =>
+    this.systemPreferredDarkSchemeQuery.matches ? 'dark' : 'light';
+
+  #toggleOnClick = () => {
     const currentUserPreferredTheme =
       this.themePersistenceService.getPreferredThemeFromLocalStorage();
     const theme =
-      currentUserPreferredTheme ?? this.prefersDarkSchemeQuery
-        ? 'dark'
-        : 'light';
+      currentUserPreferredTheme ?? this.isCurrentSystemPreferredThemeDark();
     const isDarkTheme = theme === 'dark';
     this.#setPreferredTheme(!isDarkTheme);
-  }
+  };
 
   /** @param {boolean} isDarkTheme */
   #setButtonTheme(isDarkTheme) {
-    this.button?.replaceChildren(getIconForTheme(isDarkTheme));
+    this.toggleButton?.replaceChildren(getIconForTheme(isDarkTheme));
   }
 
   /** @param {boolean} isDarkTheme */
@@ -88,7 +93,7 @@ export class ThemeTogglerService {
     );
   }
 
-  applyPreferredThemeIfDefined() {
+  applyUserPreferredThemeIfDefined() {
     const isDefined =
       this.themePersistenceService.getPreferredThemeFromLocalStorage();
     if (isDefined) {
