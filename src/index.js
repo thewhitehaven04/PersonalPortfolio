@@ -5,7 +5,7 @@ import '/src/themeSwitcher';
 
 /** @type NodeListOf<HTMLDivElement> */
 const carousels = document.querySelectorAll('.carousel');
-setupCarouselAnimation(carousels[0]);
+carousels.forEach((carousel) => setupCarouselAnimation(carousel));
 
 const themeToggleButton = document.querySelector('#theme-toggle');
 const body = document.querySelector('body');
