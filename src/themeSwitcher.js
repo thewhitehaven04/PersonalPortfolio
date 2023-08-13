@@ -13,12 +13,14 @@ const getIconForTheme = (/** @type {boolean} */ isDarkTheme) => {
   return buttonIcon.node[0];
 };
 
+/** Saves theme preference to local storage. */
 export class ThemePersistenceService {
-  getPreferredThemeFromLocalStorage() {
+  getPreferredTheme() {
     return localStorage.getItem(PREFERRED_THEME_KEY);
   }
 
-  savePreferredThemeToLocalStorage(theme) {
+  /** @param {string} theme */
+  savePreferredTheme(theme) {
     localStorage.setItem(PREFERRED_THEME_KEY, theme);
   }
 }
@@ -26,27 +28,26 @@ export class ThemeTogglerService {
   /**
    * @param {?Element} button
    * @param {ThemePersistenceService} themePersistenceService
+   * @param {HTMLBodyElement | null} bodyElement
    */
-  constructor(button, themePersistenceService) {
+  constructor(button, bodyElement, themePersistenceService) {
     this.themePersistenceService = themePersistenceService;
-
     this.toggleButton = button;
-    this.bodyElement = document.querySelector('body');
+    this.bodyElement = bodyElement;
 
     this.systemPreferredDarkSchemeQuery = window.matchMedia(
       '(prefers-color-scheme: dark)',
     );
 
-    const initialPreferred =
-      themePersistenceService.getPreferredThemeFromLocalStorage();
+    const initialPreferred = this.themePersistenceService.getPreferredTheme();
     if (initialPreferred) {
       this.#setButtonTheme(initialPreferred === 'dark');
     } else {
-      this.#setButtonTheme(this.isCurrentSystemPreferredThemeDark() === 'dark');
+      this.#setButtonTheme(this.getSystemPreferredTheme() === 'dark');
     }
 
     this.systemPreferredDarkSchemeQuery.addEventListener('change', (e) => {
-      const isDarkTheme = this.isCurrentSystemPreferredThemeDark() === 'dark';
+      const isDarkTheme = this.getSystemPreferredTheme() === 'dark';
       if (!initialPreferred) {
         this.#setTheme(isDarkTheme);
         this.#setButtonTheme(isDarkTheme);
@@ -56,14 +57,13 @@ export class ThemeTogglerService {
     this.toggleButton?.addEventListener('click', this.#toggleOnClick);
   }
 
-  isCurrentSystemPreferredThemeDark = () =>
+  getSystemPreferredTheme = () =>
     this.systemPreferredDarkSchemeQuery.matches ? 'dark' : 'light';
 
   #toggleOnClick = () => {
     const currentUserPreferredTheme =
-      this.themePersistenceService.getPreferredThemeFromLocalStorage();
-    const theme =
-      currentUserPreferredTheme ?? this.isCurrentSystemPreferredThemeDark();
+      this.themePersistenceService.getPreferredTheme();
+    const theme = currentUserPreferredTheme ?? this.getSystemPreferredTheme();
     const isDarkTheme = theme === 'dark';
     this.#setPreferredTheme(!isDarkTheme);
   };
@@ -88,14 +88,11 @@ export class ThemeTogglerService {
     this.#setButtonTheme(isDarkTheme);
 
     const preferredTheme = isDarkTheme ? 'dark' : 'light';
-    this.themePersistenceService.savePreferredThemeToLocalStorage(
-      preferredTheme,
-    );
+    this.themePersistenceService.savePreferredTheme(preferredTheme);
   }
 
   applyUserPreferredThemeIfDefined() {
-    const isDefined =
-      this.themePersistenceService.getPreferredThemeFromLocalStorage();
+    const isDefined = this.themePersistenceService.getPreferredTheme();
     if (isDefined) {
       const isDarkTheme = isDefined === 'dark';
       this.#setButtonTheme(isDarkTheme);

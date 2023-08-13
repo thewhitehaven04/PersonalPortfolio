@@ -7,10 +7,12 @@ import '/src/themeSwitcher';
 const carousels = document.querySelectorAll('.carousel');
 setupCarouselAnimation(carousels[0]);
 
-export const themeToggleButton = document.querySelector('#theme-toggle');
+const themeToggleButton = document.querySelector('#theme-toggle');
+const body = document.querySelector('body');
 
 const themeTogglerService = new ThemeTogglerService(
   themeToggleButton,
+  body,
   new ThemePersistenceService(),
 );
 themeTogglerService.applyUserPreferredThemeIfDefined();

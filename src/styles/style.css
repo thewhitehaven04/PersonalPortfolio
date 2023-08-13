@@ -1,13 +1,6 @@
 @import url('/node_modules/normalize.css/normalize.css');
 
-body {
-  font-family: DM Sans, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-    'Segoe UI Symbol';
-
-  margin: 0;
-}
-
+/** document-wide styles */
 :root {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -15,6 +8,9 @@ body {
 }
 
 body {
+  font-family: DM Sans, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol';
   margin: 0;
 
   --header-bg: url('./../resources/images/backgrounds/photo_large.jpeg');
@@ -36,6 +32,10 @@ body.dark-theme {
   --bg-color: #1a1625;
 }
 
+button {
+  background-color: inherit;
+}
+
 .no-border {
   border: none;
 }
@@ -45,14 +45,6 @@ body.dark-theme {
 *::before {
   box-sizing: inherit;
 }
-
-/* @media screen and (prefers-color-scheme: light) {
-  :root {
-    --bg-color: #bbb;
-    --font-color-primary: #505050;
-    --font-color-secondary: #181818;
-  }
-} */
 
 @media screen and (max-width: 1080px) {
   body {
@@ -87,7 +79,7 @@ body {
   max-width: 90%;
 }
 
-.m-w-100 {
+.max-w-100 {
   max-width: 100%;
 }
 
@@ -136,6 +128,10 @@ body {
 
 .flex-a-start {
   align-items: flex-start;
+}
+
+.flex-a-baseline {
+  align-items: baseline;
 }
 
 .rg-single {
