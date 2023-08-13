@@ -223,3 +223,14 @@ body {
   transition-duration: 0.7s;
   transition-timing-function: ease-in-out;
 }
+
+.pos-relative {
+  position: relative;
+}
+
+.top-right-position {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 1;
+}
