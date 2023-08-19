@@ -111,7 +111,7 @@ main {
   grid-column: 2;
 }
 
-@media screen and (max-width: 1080px) and (min-width: 481px) {
+@media screen and (max-width: 1080px) {
   body {
     --max-main-width: 100vw;
   }
@@ -124,6 +124,10 @@ main {
 
   .sidebar {
     transform: unset;
+    height: unset;
+    opacity: 0.9;
+    border: none;
+    box-shadow: none;
   }
 }
 
@@ -133,18 +137,12 @@ main {
     --max-main-width: 100vw;
   }
 
+  .sidebar {
+    background-color: unset;
+  }
+
   header {
     padding: 0px;
-  }
-
-  .app-container {
-    width: 100%;
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  .sidebar {
-    transform: unset;
   }
 }
 
