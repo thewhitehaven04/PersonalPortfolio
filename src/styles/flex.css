@@ -42,19 +42,19 @@
 }
 
 .rg-single {
-  row-gap: 8px;
+  row-gap: 12px;
 }
 
 .rg-double {
-  row-gap: 16px;
+  row-gap: 24px;
 }
 
 .g-double {
-  gap: 10px;
+  gap: 12px;
 }
 
 .g-quadruple {
-  gap: 20px;
+  gap: 24px;
 }
 
 @media screen and (max-width: 480px) {
@@ -66,6 +66,11 @@
   .mobile-flex-row {
     display: flex;
     flex-direction: row;
+  }
+
+  .mobile-flex-row-reverse {
+    display: flex;
+    flex-direction: row-reverse;
   }
 
   .mobile-flex-a-center {

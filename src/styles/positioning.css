@@ -1,0 +1,17 @@
+/** positioning styles */
+.pos-relative {
+  position: relative;
+}
+
+.pos-absolute {
+  position: absolute;
+}
+
+.top-right-position {
+  top: 15px;
+  right: 15px;
+}
+
+.bottom-position {
+  bottom: 15px;
+}

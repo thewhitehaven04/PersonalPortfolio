@@ -20,60 +20,90 @@
     ></script>
     <link
       rel="stylesheet"
-      href="styles/style.css"
-    />
-    <link
-      rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=DM+Sans"
     />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Space+Grotesk"
     />
+    <link
+      rel="stylesheet"
+      href="/src/styles/flex.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/src/styles/positioning.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/src/styles/style.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/src/styles/box.css"
+    />
     <title>thewhitehaven04</title>
   </head>
   <body class="font-color-dark flex-column g-double">
-    <header class="mobile-flex-column mobile-flex-a-center max-w-100">
-      <article class="pos-relative float-left fit-cover margin-double">
-        <picture>
-          <source
-            srcset="/src/resources/images/backgrounds/compressed_square.jpg"
-            media="(min-width: 481px)"
-          />
-          <source
-            srcset="
-              /src/resources/images/backgrounds/compressed_rectangular.jpg
-            "
-            media="(max-width: 480px)"
-          />
-          <img
-            src="/src/resources/images/backgrounds/compressed_square.jpg"
-            alt="thewhitehaven04"
-            class="max-w-300px b-shadow"
-          />
-        </picture>
-        <div
-          class="color-white font-s-larger font-outline pos-relative w-100 min-w-max-content text-center"
-        >
-          thewhitehaven04
-        </div>
-      </article>
-      <p
-        class="font-s-large font-color-primary text-justify margin-double"
+    <header
+      class="mobile-flex-column mobile-flex-a-center flex-row max-w-100 g-double pad-single"
+    >
+      <div class="mobile-flex-column g-double">
+        <article class="pos-relative float-left fit-cover margin-h-single">
+          <picture>
+            <source
+              srcset="/src/resources/images/backgrounds/compressed_square.jpg"
+              media="(min-width: 481px)"
+            />
+            <source
+              srcset="
+                /src/resources/images/backgrounds/compressed_rectangular.jpg
+              "
+              media="(max-width: 480px)"
+            />
+            <img
+              src="/src/resources/images/backgrounds/compressed_square.jpg"
+              alt="thewhitehaven04"
+              class="b-shadow"
+              id="photo"
+            />
+          </picture>
+          <div
+            class="color-white font-s-larger font-outline pos-relative w-100 min-w-max-content text-center"
+          >
+            thewhitehaven04
+          </div>
+        </article>
+        <p class="font-s-large font-color-primary text-justify">
+          I am a self-taught aspiring web developer currently residing in
+          Serbia. I have 4 years of experience working as a QA Automation
+          Engineer and now I'm looking to switch to front-end development. You
+          can find some of my projects below. I'm looking forward to hearing
+          from you if you think we have something to offer to each other.
+        </p>
+      </div>
+      <div
+        class="mobile-flex-row-reverse flex-column flex-j-space-between pad-single"
       >
-        I am a self-taught aspiring web developer currently residing in Serbia.
-        I have 4 years of experience working as a QA Automation Engineer and now
-        I'm looking to switch to front-end development. You can find some of my
-        projects below. I'm looking forward to hearing from you if you think we
-        have something to offer to each other.
-      </p>
-      <button
-        type="button"
-        id="theme-toggle"
-        class="font-color-primary font-s-larger no-border"
-      ></button>
+        <button
+          type="button"
+          id="theme-toggle"
+          class="font-color-primary font-s-larger no-border"
+        ></button>
+        <div class="mobile-flex-row flex-column g-quadruple font-s-larger">
+          <a href="mailto:thewhitehaven04@gmail.com">
+            <i class="fa-solid fa-envelope font-color-primary"></i>
+          </a>
+          <a href="https://t.me/Northern_L1ghts">
+            <i class="fa-brands fa-telegram font-color-primary"></i>
+          </a>
+          <a href="https://github.com/thewhitehaven04">
+            <i class="fa-brands fa-github font-color-primary"></i>
+          </a>
+        </div>
+      </div>
     </header>
-    <main class="pad-double g-double">
+    <main class="pad-single g-double">
       <h1 class="font-s-larger text-center font-color-primary grid-header">
         JS Projects
       </h1>
@@ -163,8 +193,8 @@
             </div>
           </div>
           <p class="font-s-normal font-color-secondary">
-            Basic weather application developed with a purpose of learning the
-            basics of JavaScript asynchronicity, Event Loop and Fetch API.
+            Basic weather application developed as a way to learn the basics of
+            JavaScript asynchronicity, event loop, Promises and the Fetch API.
           </p>
         </div>
       </article>
