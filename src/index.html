@@ -45,255 +45,264 @@
     <title>thewhitehaven04</title>
   </head>
   <body class="font-color-dark flex-column g-double">
-    <header
-      class="mobile-flex-column mobile-flex-a-center flex-row max-w-100 g-double pad-single"
-    >
-      <div class="mobile-flex-column g-double">
-        <article class="pos-relative float-left fit-cover margin-h-single">
-          <picture>
-            <source
-              srcset="/src/resources/images/backgrounds/compressed_square.jpg"
-              media="(min-width: 481px)"
-            />
-            <source
-              srcset="
-                /src/resources/images/backgrounds/compressed_rectangular.jpg
-              "
-              media="(max-width: 480px)"
-            />
-            <img
-              src="/src/resources/images/backgrounds/compressed_square.jpg"
-              alt="thewhitehaven04"
-              class="b-shadow"
-              id="photo"
-            />
-          </picture>
-          <div
-            class="color-white font-s-larger font-outline pos-relative w-100 min-w-max-content text-center"
+    <div class="app-container">
+      <header
+        class="mobile-flex-column mobile-flex-a-center flex-row max-w-100 g-double"
+      >
+        <div class="mobile-flex-column g-double">
+          <article class="pos-relative float-left fit-cover margin-h-single">
+            <picture>
+              <source
+                srcset="/src/resources/images/backgrounds/compressed_square.jpg"
+                media="(min-width: 481px)"
+              />
+              <source
+                srcset="
+                  /src/resources/images/backgrounds/compressed_rectangular.jpg
+                "
+                media="(max-width: 480px)"
+              />
+              <img
+                src="/src/resources/images/backgrounds/compressed_square.jpg"
+                alt="thewhitehaven04"
+                class="b-shadow"
+                id="photo"
+              />
+            </picture>
+            <div
+              class="color-white font-s-larger font-outline pos-relative w-100 min-w-max-content text-center"
+            >
+              thewhitehaven04
+            </div>
+          </article>
+          <p class="font-s-large font-color-primary text-justify pad-single">
+            I am a self-taught aspiring web developer currently residing in
+            Serbia. I have 4 years of experience working as a QA Automation
+            Engineer and now I'm looking to switch to front-end development. You
+            can find some of my projects below. I'm looking forward to hearing
+            from you if you think we have something to offer to each other.
+          </p>
+        </div>
+        <div
+          class="mobile-flex-row-reverse mobile-w-100 flex-column flex-j-space-between pad-single sidebar tablet-position-static mobile-position-static b-shadow"
+        >
+          <button
+            type="button"
+            id="theme-toggle"
+            class="font-s-larger no-border font-color-tertiary"
+          ></button>
+          <div class="mobile-flex-row flex-column g-quadruple font-s-larger">
+            <a href="mailto:thewhitehaven04@gmail.com">
+              <i class="fa-solid fa-envelope font-color-tertiary"></i>
+            </a>
+            <a href="https://t.me/Northern_L1ghts">
+              <i class="fa-brands fa-telegram font-color-tertiary"></i>
+            </a>
+            <a href="https://github.com/thewhitehaven04">
+              <i class="fa-brands fa-github font-color-tertiary"></i>
+            </a>
+          </div>
+        </div>
+      </header>
+      <main class="pad-single g-double">
+        <h1 class="font-s-larger text-center font-color-primary grid-header">
+          JS Projects
+        </h1>
+        <article
+          class="flex-column first-column flex-a-stretch b-shadow bg-card-color-primary border-round grid-column-1"
+        >
+          <a
+            href="https://thewhitehaven04.github.io/Project_Battleship/"
+            target="_blank"
+            class="max-w-100 pos-relative"
           >
-            thewhitehaven04
+            <i
+              class="fa-solid fa-up-right-from-square pos-absolute top-right-position z-i-1 font-color-primary font-s-large"
+            ></i>
+            <div class="carousel flex-row">
+              <img
+                src="/src/resources/images/project_screenshots/battleship/battleship_1.png"
+                alt="Battleship game ship deployment stage"
+                class="w-100 h-100"
+              />
+              <img
+                src="/src/resources/images/project_screenshots/battleship/battleship_1.png"
+                alt="Battleship game battle stage"
+                class="w-100 h-100"
+              />
+            </div>
+          </a>
+          <div class="pad-double">
+            <div
+              class="flex-row flex-a-center g-double flex-j-space-between w-100"
+            >
+              <h2 class="font-s-large font-color-primary">
+                Project Battleship
+              </h2>
+              <div
+                class="flex-row flex-j-space-between font-s-large font-color-primary g-double"
+              >
+                <a
+                  href="https://github.com/thewhitehaven04/Project_Battleship"
+                  class="font-color-primary"
+                  target="_blank"
+                >
+                  <i class="fa-solid fa-code"></i>
+                </a>
+              </div>
+            </div>
+            <p class="font-s-normal font-color-secondary">
+              Classic Battleship game replicated with a purpose of learning Test
+              Driven Development technique.
+            </p>
           </div>
         </article>
-        <p class="font-s-large font-color-primary text-justify">
-          I am a self-taught aspiring web developer currently residing in
-          Serbia. I have 4 years of experience working as a QA Automation
-          Engineer and now I'm looking to switch to front-end development. You
-          can find some of my projects below. I'm looking forward to hearing
-          from you if you think we have something to offer to each other.
-        </p>
-      </div>
-      <div
-        class="mobile-flex-row-reverse mobile-w-100 flex-column flex-j-space-between pad-single"
-      >
-        <button
-          type="button"
-          id="theme-toggle"
-          class="font-color-primary font-s-larger no-border"
-        ></button>
-        <div class="mobile-flex-row flex-column g-quadruple font-s-larger">
-          <a href="mailto:thewhitehaven04@gmail.com">
-            <i class="fa-solid fa-envelope font-color-primary"></i>
-          </a>
-          <a href="https://t.me/Northern_L1ghts">
-            <i class="fa-brands fa-telegram font-color-primary"></i>
-          </a>
-          <a href="https://github.com/thewhitehaven04">
-            <i class="fa-brands fa-github font-color-primary"></i>
-          </a>
-        </div>
-      </div>
-    </header>
-    <main class="pad-single g-double">
-      <h1 class="font-s-larger text-center font-color-primary grid-header">
-        JS Projects
-      </h1>
-      <article
-        class="flex-column first-column flex-a-stretch b-shadow bg-card-color-primary border-round grid-column-1"
-      >
-        <a
-          href="https://thewhitehaven04.github.io/Project_Battleship/"
-          target="_blank"
-          class="max-w-100 pos-relative"
+        <article
+          class="flex-column first-column flex-a-stretch b-shadow bg-card-color-primary border-round grid-column-1"
         >
-          <i
-            class="fa-solid fa-up-right-from-square pos-absolute top-right-position z-i-1 font-color-primary font-s-large"
-          ></i>
-          <div class="carousel flex-row">
-            <img
-              src="/src/resources/images/project_screenshots/battleship/battleship_1.png"
-              alt="Battleship game ship deployment stage"
-              class="w-100 h-100"
-            />
-            <img
-              src="/src/resources/images/project_screenshots/battleship/battleship_1.png"
-              alt="Battleship game battle stage"
-              class="w-100 h-100"
-            />
-          </div>
-        </a>
-        <div class="pad-double">
-          <div
-            class="flex-row flex-a-center g-double flex-j-space-between w-100"
+          <a
+            href="https://thewhitehaven04.github.io/Project_WeatherApp/"
+            target="_blank"
+            class="max-w-100 pos-relative"
           >
-            <h2 class="font-s-large font-color-primary">Project Battleship</h2>
-            <div
-              class="flex-row flex-j-space-between font-s-large font-color-primary g-double"
-            >
-              <a
-                href="https://github.com/thewhitehaven04/Project_Battleship"
-                class="font-color-primary"
-                target="_blank"
-              >
-                <i class="fa-solid fa-code"></i>
-              </a>
+            <i
+              class="fa-solid fa-up-right-from-square pos-absolute top-right-position z-i-1 font-color-primary font-s-large"
+            ></i>
+            <div class="carousel flex-row">
+              <img
+                src="/src/resources/images/project_screenshots/weather_app/weather_current.png"
+                alt="Current Weather page"
+                class="w-100 h-100"
+              />
+              <img
+                src="/src/resources/images/project_screenshots/weather_app/weather_forecast.png"
+                alt="Weather Forecast page"
+                class="w-100 h-100"
+              />
             </div>
+          </a>
+          <div class="pad-double">
+            <div class="flex-row flex-a-center flex-j-space-between w-100">
+              <h2 class="font-s-large font-color-primary">
+                Weather Application
+              </h2>
+              <div
+                class="flex-row flex-j-space-between g-double font-s-large font-color-primary"
+              >
+                <a
+                  href="https://thewhitehaven04.github.io/Project_WeatherApp/"
+                  target="_blank"
+                >
+                  <i class="fa-solid fa-code"></i>
+                </a>
+              </div>
+            </div>
+            <p class="font-s-normal font-color-secondary">
+              Basic weather application developed as a way to learn the basics
+              of JavaScript asynchronicity, event loop, Promises, the Fetch and
+              Geolocation APIs.
+            </p>
           </div>
-          <p class="font-s-normal font-color-secondary">
-            Classic Battleship game replicated with a purpose of learning Test
-            Driven Development technique.
-          </p>
-        </div>
-      </article>
-      <article
-        class="flex-column first-column flex-a-stretch b-shadow bg-card-color-primary border-round grid-column-1"
-      >
-        <a
-          href="https://thewhitehaven04.github.io/Project_WeatherApp/"
-          target="_blank"
-          class="max-w-100 pos-relative"
+        </article>
+        <h1 class="font-s-larger text-center font-color-primary grid-header">
+          React Projects
+        </h1>
+        <article
+          class="flex-column second-column flex-a-stretch b-shadow bg-card-color-primary border-round grid-column-2"
         >
-          <i
-            class="fa-solid fa-up-right-from-square pos-absolute top-right-position z-i-1 font-color-primary font-s-large"
-          ></i>
-          <div class="carousel flex-row">
+          <a
+            href="https://thewhitehaven04.github.io/Project_ShoppingCart/"
+            target="_blank"
+            class="max-w-100 pos-relative"
+          >
+            <i
+              class="fa-solid fa-up-right-from-square pos-absolute top-right-position z-i-1 font-color-primary font-s-large"
+            ></i>
+            <div class="carousel flex-row">
+              <img
+                src="/src/resources/images/project_screenshots/shopping_cart/shopping_cart_1.png"
+                alt="Shopping cart home page"
+                class="max-w-100"
+              />
+              <img
+                src="/src/resources/images/project_screenshots/shopping_cart/shopping_cart_2.png"
+                alt="Shopping cart store page"
+                class="max-w-100"
+              />
+              <img
+                src="/src/resources/images/project_screenshots/shopping_cart/shopping_cart_3.png"
+                alt="Shopping cart, cart page"
+                class="max-w-100"
+              />
+              <img
+                src="/src/resources/images/project_screenshots/shopping_cart/shopping_cart_4.png"
+                alt="Shopping cart product description page"
+                class="max-w-100"
+              />
+            </div>
+          </a>
+          <div class="pad-double">
+            <div class="flex-row flex-a-center flex-j-space-between w-100">
+              <h2 class="font-s-large font-color-primary">Shopping Cart</h2>
+              <div
+                class="flex-row flex-j-space-between font-s-large font-color-primary g-double"
+              >
+                <a
+                  href="https://github.com/thewhitehaven04/Project_ShoppingCart"
+                  target="_blank"
+                ></a>
+                <i class="fa-solid fa-code"></i>
+              </div>
+            </div>
+            <p class="font-s-normal font-color-secondary">
+              Basic Shopping Cart project built with the goal of figuring out
+              how react-router-dom and react-testing-library work
+            </p>
+          </div>
+        </article>
+        <article
+          class="flex-column second-column flex-a-stretch b-shadow bg-card-color-primary border-round grid-column-2"
+        >
+          <a
+            href="https://thewhitehaven04.github.io/Project_MemoryCard/"
+            target="_blank"
+            class="max-w-100 pos-relative"
+          >
+            <i
+              class="fa-solid fa-up-right-from-square pos-absolute top-right-position z-i-1 font-color-primary font-s-large"
+            ></i>
             <img
-              src="/src/resources/images/project_screenshots/weather_app/weather_current.png"
-              alt="Current Weather page"
+              src="/src/resources/images/project_screenshots/memory_card/memory_card.png"
+              alt="Memory Card Project"
               class="w-100 h-100"
             />
-            <img
-              src="/src/resources/images/project_screenshots/weather_app/weather_forecast.png"
-              alt="Weather Forecast page"
-              class="w-100 h-100"
-            />
-          </div>
-        </a>
-        <div class="pad-double">
-          <div class="flex-row flex-a-center flex-j-space-between w-100">
-            <h2 class="font-s-large font-color-primary">Weather Application</h2>
-            <div
-              class="flex-row flex-j-space-between g-double font-s-large font-color-primary"
-            >
-              <a
-                href="https://thewhitehaven04.github.io/Project_WeatherApp/"
-                target="_blank"
+          </a>
+          <div class="pad-double">
+            <div class="flex-row flex-a-center flex-j-space-between w-100">
+              <h2 class="font-s-large font-color-primary">
+                Monogatari Memory Card
+              </h2>
+              <div
+                class="flex-row flex-j-space-between font-s-large font-color-primary g-double"
               >
-                <i class="fa-solid fa-code"></i>
-              </a>
+                <a
+                  href="https://github.com/thewhitehaven04/Project_MemoryCard"
+                  target="_blank"
+                >
+                  <i class="fa-solid fa-code"></i>
+                </a>
+              </div>
             </div>
+            <p class="font-s-normal font-color-secondary">
+              Learning the basics of React: functional components, state, props
+            </p>
           </div>
-          <p class="font-s-normal font-color-secondary">
-            Basic weather application developed as a way to learn the basics of
-            JavaScript asynchronicity, event loop, Promises and the Fetch API.
-          </p>
-        </div>
-      </article>
-      <h1 class="font-s-larger text-center font-color-primary grid-header">
-        React Projects
-      </h1>
-      <article
-        class="flex-column second-column flex-a-stretch b-shadow bg-card-color-primary border-round grid-column-2"
-      >
-        <a
-          href="https://thewhitehaven04.github.io/Project_ShoppingCart/"
-          target="_blank"
-          class="max-w-100 pos-relative"
-        >
-          <i
-            class="fa-solid fa-up-right-from-square pos-absolute top-right-position z-i-1 font-color-primary font-s-large"
-          ></i>
-          <div class="carousel flex-row">
-            <img
-              src="/src/resources/images/project_screenshots/shopping_cart/shopping_cart_1.png"
-              alt="Shopping cart home page"
-              class="max-w-100"
-            />
-            <img
-              src="/src/resources/images/project_screenshots/shopping_cart/shopping_cart_2.png"
-              alt="Shopping cart store page"
-              class="max-w-100"
-            />
-            <img
-              src="/src/resources/images/project_screenshots/shopping_cart/shopping_cart_3.png"
-              alt="Shopping cart, cart page"
-              class="max-w-100"
-            />
-            <img
-              src="/src/resources/images/project_screenshots/shopping_cart/shopping_cart_4.png"
-              alt="Shopping cart product description page"
-              class="max-w-100"
-            />
-          </div>
-        </a>
-        <div class="pad-double">
-          <div class="flex-row flex-a-center flex-j-space-between w-100">
-            <h2 class="font-s-large font-color-primary">Shopping Cart</h2>
-            <div
-              class="flex-row flex-j-space-between font-s-large font-color-primary g-double"
-            >
-              <a
-                href="https://github.com/thewhitehaven04/Project_ShoppingCart"
-                target="_blank"
-              ></a>
-              <i class="fa-solid fa-code"></i>
-            </div>
-          </div>
-          <p class="font-s-normal font-color-secondary">
-            Basic Shopping Cart project built with the goal of figuring out how
-            react-router-dom and react-testing-library work
-          </p>
-        </div>
-      </article>
-      <article
-        class="flex-column second-column flex-a-stretch b-shadow bg-card-color-primary border-round grid-column-2"
-      >
-        <a
-          href="https://thewhitehaven04.github.io/Project_MemoryCard/"
-          target="_blank"
-          class="max-w-100 pos-relative"
-        >
-          <i
-            class="fa-solid fa-up-right-from-square pos-absolute top-right-position z-i-1 font-color-primary font-s-large"
-          ></i>
-          <img
-            src="/src/resources/images/project_screenshots/memory_card/memory_card.png"
-            alt="Memory Card Project"
-            class="w-100 h-100"
-          />
-        </a>
-        <div class="pad-double">
-          <div class="flex-row flex-a-center flex-j-space-between w-100">
-            <h2 class="font-s-large font-color-primary">
-              Monogatari Memory Card
-            </h2>
-            <div
-              class="flex-row flex-j-space-between font-s-large font-color-primary g-double"
-            >
-              <a
-                href="https://github.com/thewhitehaven04/Project_MemoryCard"
-                target="_blank"
-              >
-                <i class="fa-solid fa-code"></i>
-              </a>
-            </div>
-          </div>
-          <p class="font-s-normal font-color-secondary">
-            Learning the basics of React: functional components, state, props
-          </p>
-        </div>
-      </article>
-    </main>
-    <footer class="flex-column flex-a-center g-double">
+        </article>
+      </main>
+    </div>
+    <footer
+      class="flex-column flex-a-center g-double bg-card-color-primary b-shadow"
+    >
       <h1 class="font-s-larger font-color-primary margin-single">Contact me</h1>
       <div class="flex-row g-quadruple font-s-larger">
         <a href="mailto:thewhitehaven04@gmail.com">
